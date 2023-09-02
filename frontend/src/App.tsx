@@ -3,6 +3,7 @@ import SearchInput from "./components/SearchInput/SearchInput";
 import "./app.scss";
 import LocationTag from "./components/LocationTag/LocationTag";
 import UpperBar from "./components/UpperBar/UpperBar";
+import WeatherCard from "./components/WeatherCard/WeatherCard";
 
 function App() {
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -16,7 +17,10 @@ function App() {
         <h1 className='section__header'>Weather Wise</h1>
         <SearchInput onChange={handleOnChange} />
       </div>
-      <div className='section-small'></div>
+      <div className='section-small'>
+        <p className='section__name'>Today</p>
+        <WeatherCard />
+      </div>
     </div>
   );
 }

@@ -13,7 +13,8 @@
   .card-section:nth-child(1) {
     margin-right: 30px;
   }
-  .card-section:nth-child(2) {
+
+  .card-section__ .card-section:nth-child(2) {
     color: rgb(141, 141, 141);
     font-size: 18px;
     line-height: 1.7;
@@ -30,9 +31,35 @@
   width: 100%;
 }
 
+.weather-description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 ul {
   padding: 0;
 }
 ul > li {
   list-style-type: none;
+}
+
+.text-large {
+  font-size: 60px;
+}
+
+.text-medium {
+  font-size: 40px;
+}
+
+.text-small {
+  font-size: 25px;
+}
+
+.bold {
+  font-weight: 900;
+}
+
+.light {
+  font-weight: 200;
 }

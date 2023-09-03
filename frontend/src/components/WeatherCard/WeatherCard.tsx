@@ -1,3 +1,4 @@
+import dayjs from "dayjs";
 import "./weatherCard.scss";
 
 interface IWeather {
@@ -34,6 +35,7 @@ interface WeatherCardPros {
   main?: IMain;
   wind?: IWind;
   sys?: ISys;
+  dt?: number;
   visibility?: number;
 }
 
@@ -42,11 +44,28 @@ export default function WeatherCard({
   main,
   wind,
   sys,
+  dt,
   visibility,
 }: WeatherCardPros) {
   return (
     <div className='card-container'>
-      <div className='card-section'>LOGO</div>
+      {weather && weather.length > 0 && (
+        <div className='card-section'>
+          <div>
+            <div className='text-large bold'>{main?.temp} °C</div>
+            <div className='weather-description text-medium light'>
+              {weather[0].main}
+              <img
+                alt='wheather_icon'
+                src={`https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`}
+              />
+            </div>
+            <div className='text-small light'>
+              {dt && dayjs(dt * 1000).format("DD.MM.YYYY")}
+            </div>
+          </div>
+        </div>
+      )}
       <div className='card-section'>
         <ul>
           {main?.feels_like && <li>Real feel: {main.feels_like} </li>}

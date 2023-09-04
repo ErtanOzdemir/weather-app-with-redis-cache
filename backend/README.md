@@ -22,10 +22,13 @@ To get started with the Weather App, follow these steps:
    yarn install
    ```
 
-3. Set up your environment variables by creating a `.env` file in the root of the project. Add your OpenWeatherMap API key like this:
+3. Set up your environment variables by creating a `.env.development` file in the root of the project. Add your variables like this:
 
    ```
    OPEN_WEATHER_API_KEY=your_api_key_here
+   PORT=4000
+   REDIS_PORT=6379
+   REDIS_HOST=localhost
    ```
 
 4. Start the server:

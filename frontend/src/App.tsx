@@ -6,6 +6,7 @@ import UpperBar from "./components/UpperBar/UpperBar";
 import WeatherCard from "./components/WeatherCard/WeatherCard";
 import axios from "axios";
 import debounce from "lodash.debounce";
+import CacheCard from "./components/CacheCard/CacheCard";
 
 function App() {
   const [options, setOptions] = useState<any>([]);
@@ -51,14 +52,26 @@ function App() {
         />
       </div>
       <div className='section-small'>
-        <p className='section__name'>Today</p>
         {selectedData && (
-          <WeatherCard
-            main={selectedData.main}
-            weather={selectedData.weather}
-            dt={selectedData.dt}
-            visibility={selectedData.visibility}
-          />
+          <>
+            <p className='section__name'>Today</p>
+            <WeatherCard
+              main={selectedData.main}
+              weather={selectedData.weather}
+              dt={selectedData.dt}
+              visibility={selectedData.visibility}
+            />
+            <p className='section__name'>Details</p>
+            <CacheCard>
+              <p
+                className={`text ${
+                  selectedData.isCache ? "text-green" : "text-red"
+                }`}
+              >
+                {selectedData.isCache ? "From Cache" : "Not Cache"}
+              </p>
+            </CacheCard>
+          </>
         )}
       </div>
     </div>

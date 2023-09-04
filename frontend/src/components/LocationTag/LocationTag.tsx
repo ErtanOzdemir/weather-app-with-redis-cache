@@ -11,7 +11,7 @@ export default function LocationTag({ location }: LocationTagProps) {
         <div className='tag-container'>
           <LocationIcon />
           <div className='text-container'>
-            <div className='text-container__title'>Current location,</div>
+            <div className='text-container__title'>Current location</div>
             <div className='text-container__place'>{location}</div>
           </div>
         </div>

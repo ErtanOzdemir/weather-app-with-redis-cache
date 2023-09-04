@@ -21,7 +21,7 @@ locationRouter.get(
     }
 
     const locations = await axios.get(
-      `http://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5&appid=${process.env.OPEN_WEATHER_API_KEY}`
+      `http://api.openweathermap.org/geo/1.0/direct?q=${query}&appid=${process.env.OPEN_WEATHER_API_KEY}`
     );
 
     if (!locations?.data || locations.data.length === 0) {

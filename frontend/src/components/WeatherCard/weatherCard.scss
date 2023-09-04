@@ -11,7 +11,12 @@
   box-sizing: border-box;
 
   .card-section:nth-child(1) {
-    margin-right: 30px;
+    @media (max-width: 768px) {
+      margin-right: unset;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
   }
 
   .card-section:nth-child(2) {
@@ -21,6 +26,17 @@
     font-weight: 500;
     padding-left: 30px;
     border-left: 4px solid rgb(212, 212, 212);
+    @media (max-width: 768px) {
+      padding-left: unset;
+      border-left: unset;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
   }
 }
 

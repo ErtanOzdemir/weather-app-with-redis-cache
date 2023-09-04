@@ -28,7 +28,10 @@ locationRouter.get(
       return res.json({ locations: [], isCache: false });
     }
 
-    redisClient.set(`location:${query}`, JSON.stringify(locations.data));
+    redisClient.set(`location:${query}`, JSON.stringify(locations.data), {
+      EX: 6 * 60 * 60,
+      NX: true,
+    });
 
     return res.json({ locations: locations.data, isCache: false });
   }

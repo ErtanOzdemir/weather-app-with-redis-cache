@@ -25,7 +25,7 @@ locationRouter.get(
     );
 
     if (!locations?.data || locations.data.length === 0) {
-      return res.status(404).json({ error: "Location not found!" });
+      return res.json({ locations: [], isCache: false });
     }
 
     redisClient.set(`location:${query}`, JSON.stringify(locations.data));

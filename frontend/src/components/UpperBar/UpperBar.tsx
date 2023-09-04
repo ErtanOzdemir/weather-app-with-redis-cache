@@ -2,9 +2,9 @@ import { GithubIcon } from "../Icons";
 import LocationTag from "../LocationTag/LocationTag";
 import "./upperBar.scss";
 
-export default function UpperBar() {
+export default function UpperBar({ location }: { location?: string | null }) {
   return (
-    <div className='bar-container'>
+    <nav className='bar-container'>
       <div>
         <a
           href='https://github.com/ErtanOzdemir/weather-app-with-redis-cache'
@@ -13,7 +13,7 @@ export default function UpperBar() {
           <GithubIcon />
         </a>
       </div>
-      <LocationTag />
-    </div>
+      <LocationTag location={location} />
+    </nav>
   );
 }

@@ -22,19 +22,10 @@ interface IWind {
   deg: number;
 }
 
-interface ISys {
-  type: number;
-  id: number;
-  country: string;
-  sunrise: number;
-  sunset: number;
-}
-
 interface WeatherCardPros {
   weather?: IWeather[];
   main?: IMain;
   wind?: IWind;
-  sys?: ISys;
   dt?: number;
   visibility?: number;
 }
@@ -43,7 +34,6 @@ export default function WeatherCard({
   weather,
   main,
   wind,
-  sys,
   dt,
   visibility,
 }: WeatherCardPros) {
@@ -52,7 +42,9 @@ export default function WeatherCard({
       {weather && weather.length > 0 && (
         <div className='card-section'>
           <div>
-            <div className='text-large bold'>{main?.temp} °C</div>
+            <div className='text-large bold'>
+              {main?.temp.toString().split(".")[0]} °C
+            </div>
             <div className='weather-description text-medium light'>
               {weather[0].main}
               <img

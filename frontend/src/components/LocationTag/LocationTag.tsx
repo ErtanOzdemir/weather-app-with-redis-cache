@@ -2,7 +2,7 @@ import { LocationIcon } from "../Icons";
 import "./locationTag.scss";
 
 interface LocationTagProps {
-  location?: string;
+  location?: string | null;
 }
 export default function LocationTag({ location }: LocationTagProps) {
   return (

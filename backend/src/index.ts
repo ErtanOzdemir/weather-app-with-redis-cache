@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use("/weather", weatherRouter);
-app.use("/location", locationRouter);
+app.use("/locations", locationRouter);
 
 app.listen(process.env.PORT, () => {
   redisClient.connect();

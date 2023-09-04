@@ -1,0 +1,19 @@
+.bar-container {
+  position: absolute;
+  display: flex;
+  padding: 40px;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  top: 0;
+  width: 100%;
+}
+
+.bar-container__link {
+  text-decoration: none;
+  font-size: 40px;
+  color: white;
+  &:hover {
+    color: rgb(167, 167, 167);
+  }
+}

@@ -21,12 +21,16 @@ weatherRouter.get(
     }
 
     const weather = await axios.get(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.OPEN_WEATHER_API_KEY}`
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.OPEN_WEATHER_API_KEY}&units=metric`
     );
 
     redisClient.set(
       `weather:lon=${lon},lat=${lat}`,
-      JSON.stringify(weather.data)
+      JSON.stringify(weather.data),
+      {
+        EX: 6 * 60 * 60,
+        NX: true,
+      }
     );
 
     return res.json({ ...weather.data, isCache: false });

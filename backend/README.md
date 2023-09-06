@@ -4,43 +4,6 @@
 
 Welcome to the Weather App documentation! This repository contains the code for a simple weather application that retrieves weather and location information using the OpenWeatherMap API and caches the data using Redis. This documentation provides an overview of how to use and set up the application.
 
-## Getting Started
-
-To get started with the Weather App, follow these steps:
-
-1. Clone the repository to your local machine:
-
-   ```bash
-   git clone https://github.com/ErtanOzdemir/weather-app-with-redis-cache.git
-   ```
-
-2. Install the required dependencies using npm or yarn:
-
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-
-3. Set up your environment variables by creating a `.env.development` file in the root of the project. Add your variables like this:
-
-   ```
-   OPEN_WEATHER_API_KEY=your_api_key_here
-   PORT=4000
-   REDIS_PORT=6379
-   REDIS_HOST=localhost
-   ```
-
-4. Start the server:
-
-   ```bash
-   npm start
-   # or
-   yarn start
-   ```
-
-Now your Weather App is up and running!
-
 ## Endpoints
 
 The Weather App provides two main endpoints:
@@ -125,8 +88,3 @@ To use the Weather App, you can make HTTP GET requests to the specified endpoint
 
 The Weather App implements caching using Redis to improve performance and reduce the load on the external API. Cached data is stored for a duration of 6 hours. If data is found in the cache, it will be returned with the `isCache` property set to `true` in the response.
 
-## License
-
-This Weather App is open-source and available under the [MIT License](LICENSE).
-
-Feel free to reach out if you have any questions or need further assistance!

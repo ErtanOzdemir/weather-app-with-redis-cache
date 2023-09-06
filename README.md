@@ -107,11 +107,7 @@ This Weather App utilizes Redis caching to improve performance and reduce the lo
 
   | Mobile Screenshot | Desktop Screenshot |
 | ----------------- | ------------------- |
-| ![Mobile Screenshot](https://github.com/ErtanOzdemir/weather-app-with-redis-cache/assets/20026295/68104d72-5758-43a3-8e49-233974956368) | ![Desktop Screenshot](https://github.com/ErtanOzdemir/weather-app-with-redis-cache/assets/20026295/61258924-dee0-4a87-9ee1-4f5bc7aa1e90) ![React-App (2)](https://github.com/ErtanOzdemir/weather-app-with-redis-cache/assets/20026295/334b63e0-24a5-4c16-a661-9a1b681e531c) |
-
-
-
-  
+| ![Mobile Screenshot](https://github.com/ErtanOzdemir/weather-app-with-redis-cache/assets/20026295/943d3c89-cb5e-4174-937b-66adf9f227e9) | ![Desktop Screenshot](https://github.com/ErtanOzdemir/weather-app-with-redis-cache/assets/20026295/89142e4e-3b3f-4304-b263-40555cfe128e) ![Desktop Screenshot](https://github.com/ErtanOzdemir/weather-app-with-redis-cache/assets/20026295/073c943d-4355-44ad-bacd-5ba1cae70431) |
 
 
 ## License

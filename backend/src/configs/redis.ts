@@ -7,6 +7,6 @@ const redisClient = createClient({
   },
 });
 
-redisClient.on("error", () => console.log("Redis Client Error!"));
+redisClient.on("error", (error) => console.log("Redis Client Error!", error));
 
 export default redisClient;

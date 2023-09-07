@@ -1,4 +1,3 @@
-
 # Weather App with Redis Cache
 
 This is a Weather App built with Node.js, React, and Redis caching. It allows users to retrieve weather information for a specific location and demonstrates the use of Redis for caching weather data.
@@ -16,6 +15,7 @@ This is a Weather App built with Node.js, React, and Redis caching. It allows us
 - SASS (for styling)
 - Node.js
 - Express.js
+- Docker
 - Axios (for making API requests)
 - TypeScript
 
@@ -24,9 +24,9 @@ This is a Weather App built with Node.js, React, and Redis caching. It allows us
 <img height="32" width="32" src="https://cdn.simpleicons.org/sass/CC6699" />&nbsp;
 <img height="32" width="32" src="https://cdn.simpleicons.org/nodedotjs/339933" />&nbsp;
 <img height="32" width="32" src="https://cdn.simpleicons.org/express" />&nbsp;
+<img height="32" width="32" src="https://cdn.simpleicons.org/docker/2496ED" />&nbsp;
 <img height="32" width="32" src="https://cdn.simpleicons.org/axios/5A29E4" />&nbsp;
 <img height="32" width="32" src="https://cdn.simpleicons.org/typescript/3178C6" />&nbsp;
-
 
 ## Prerequisites
 
@@ -53,19 +53,18 @@ Before you can run this application, ensure you have the following dependencies 
 
 3. Set up your environment variables by creating a `.env.development file in the root of the `backend` folder. Add your variables like this:
 
-    ```bash
-    OPEN_WEATHER_API_KEY=your_api_key_here
-    PORT=4000
-    REDIS_PORT=6379
-    REDIS_HOST=localhost
-    ```
+   ```bash
+   OPEN_WEATHER_API_KEY=your_api_key_here
+   PORT=4000
+   REDIS_PORT=6379
+   REDIS_HOST=localhost or redis (if you run with docker) 
+   ```
 
 4. Run the backend.
- 
+
    ```bash
    npm run start:dev
    ```
-     
 
 5. In a new terminal, navigate to the frontend directory:
 
@@ -79,13 +78,14 @@ Before you can run this application, ensure you have the following dependencies 
    npm install
    ```
 
-
 7. Set up your environment variables by creating a `.env` file in the root of the `frontend` folder. Add your variables like this:
 
-    ```bash
-    REACT_APP_API_URL=http://localhost:4000
-    ```
+   ```bash
+   REACT_APP_API_URL=http://localhost:4000
+   ```
+
 8. Run the frontend.
+
    ```bash
    npm run start
    ```
@@ -105,10 +105,9 @@ This Weather App utilizes Redis caching to improve performance and reduce the lo
 
 ## Screenshots
 
-  | Mobile Screenshot | Desktop Screenshot |
-| ----------------- | ------------------- |
+| Mobile Screenshot                                                                                                                       | Desktop Screenshot                                                                                                                                                                                                                                                                |
+| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![Mobile Screenshot](https://github.com/ErtanOzdemir/weather-app-with-redis-cache/assets/20026295/943d3c89-cb5e-4174-937b-66adf9f227e9) | ![Desktop Screenshot](https://github.com/ErtanOzdemir/weather-app-with-redis-cache/assets/20026295/89142e4e-3b3f-4304-b263-40555cfe128e) ![Desktop Screenshot](https://github.com/ErtanOzdemir/weather-app-with-redis-cache/assets/20026295/073c943d-4355-44ad-bacd-5ba1cae70431) |
-
 
 ## License
 
@@ -118,4 +117,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Thanks to [OpenWeather](https://openweathermap.org/) for providing the weather data API.
 - This project was created as a demonstration of using Redis caching in a Node.js and React application.
-
